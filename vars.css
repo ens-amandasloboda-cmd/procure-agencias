@@ -1,0 +1,49 @@
+/* ==========================================================
+   Design tokens: Meu INSS
+   Reescrito a partir do export do Figma. O export original
+   declarava --cor várias vezes (a última sobrescrevia as outras),
+   então cada cor agora tem um nome próprio.
+   ========================================================== */
+:root {
+  /* Cores base */
+  --azul-escuro: #2247bf;
+  --azul-claro: #c7e3f9;
+  --verde-escuro: #314d1c;
+  --verde-claro: #deead6;
+  --amarelo-claro: #efdeab;
+  --amarelo-escuro: #eac452;
+  --cinza-claro: #f1f1f1;
+  --branco: #ffffff;
+  --preto: #000000;
+
+  /* Cores semânticas (usadas nos componentes) */
+  --cor-texto: var(--preto);
+  --cor-fundo: var(--branco);
+  --cor-link: var(--azul-escuro);
+  --cor-destaque: var(--azul-escuro);
+  --cor-acao: var(--verde-escuro);
+  --cor-hero: var(--verde-claro);
+
+  /* Famílias de fonte */
+  --fonte-texto: "Inter", system-ui, sans-serif;
+  --fonte-titulo: "Poppins", system-ui, sans-serif;
+
+  /* Tamanhos */
+  --fs-titulo: 2rem;      /* 32px */
+  --fs-titulo-2: 1.5rem;  /* 24px */
+  --fs-subtitulo: 1.25rem;/* 20px */
+  --fs-texto: 1rem;       /* 16px */
+  --fs-texto-2: 0.875rem; /* 14px */
+  --fs-texto-3: 0.75rem;  /* 12px */
+  --fs-pequeno: 0.625rem; /* 10px */
+
+  /* Pesos */
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Layout */
+  --largura-max: 1400px;
+  --espaco-lateral: 32px;
+  --raio-pill: 30px;
+}

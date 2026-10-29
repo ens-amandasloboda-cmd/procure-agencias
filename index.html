@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procure Agências</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Poppins:wght@700&display=swap">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header container">
+    <a class="brand" href="#">
+      <img class="brand__logo" src="imagem-logo0.png" alt="">
+      <div>
+        <p class="brand__nome">Meu INSS</p>
+        <p class="brand__slogan">O INSS mais perto de você</p>
+      </div>
+    </a>
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li><a class="nav__link" href="#">Início</a></li>
+        <li><a class="nav__link" href="#">Serviços</a></li>
+        <li><a class="nav__link" href="#">Benefícios</a></li>
+        <li><a class="nav__link" href="#">Agências</a></li>
+      </ul>
+    </nav>
+    <a class="header__login" href="#">
+      <img src="cone-login0.svg" alt="">
+    </a>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__titulo" id="titulo-busca">
+          Encontre uma <span class="hero__titulo-destaque">Agência</span>
+        </h1>
+        <p class="hero__texto">
+          Informe seu CEP ou permita utilizar sua localização para buscar
+          agências mais próximas de você.
+        </p>
+        <form class="busca" id="form-busca">
+          <label class="busca__rotulo" for="cep">CEP</label>
+          <div class="busca__linha">
+            <div class="busca__campo">
+              <img class="busca__icone" src="icone-mapa.png" alt="">
+              <input class="busca__input" type="text" id="cep">
+              <button class="busca__limpar" type="button">
+                <img src="icone-fechar.png" alt="">
+              </button>
+            </div>
+            <button class="btn" type="submit">
+              <img class="btn__icone" src="icone-buscar.png" alt="">
+              Buscar
+            </button>
+
+            <button class="btn" type="button" id="usar-localizacao">
+              <img class="btn__icone" src="icone-localizacao.png" alt="">
+              Usar minha localização
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="resultados container" id="resultados">
+      <div>
+        <h2 class="resultados__titulo" id="titulo-resultados">Agências encontradas</h2>
+          <img class="agencia__icone" src="imagem-ag-ncias0.svg" alt="">
+          <div class="agencia__conteudo">
+            <div>
+              <h3 class="agencia__nome">INSS- Instituto Nacional do Seguro Social</h3>
+              <p class="agencia__cidade">União da Vitória - PR</p>
+            </div>
+
+            <div class="agencia__detalhes">
+              <div>
+                <span>Endereço:</span>
+                <span>Rua Ipiranga, 251, Centro</span>
+              </div>
+              <div class="agencia__item--bloco">
+                <span>Horário de atendimento:</span>
+                <span>Segunda a Sexta, das 07:00 às 13:00</span>
+              </div>
+              <div>
+                <span>Telefone:</span>
+                <span>(42) 999 9999-99</span>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="mapa">
+        <img class="mapa__imagem" src="Imagem - Centro.png">
+        <a class="btn btn--azul mapa__link" href="https://www.google.com/maps/search/?api=1&query=INSS+Rua+Ipiranga+251+Uni%C3%A3o+da+Vit%C3%B3ria+PR">
+          <img src="imagem-maps.png" alt="">Ver no Google Maps</a>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape container">
+    <button class="voltar" type="button">
+      <img src="icone-voltar.png" alt="">
+    </button>
+  </footer>
+
+</body>
+</html>
+
+<script>
+  const formulario = document.getElementById("form-busca");
+  const resultados = document.getElementById("resultados");
+  const rodape = document.querySelector(".rodape");
+
+  formulario.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    resultados.style.display = "flex";
+    rodape.style.display = "flex";
+  });
+</script>
